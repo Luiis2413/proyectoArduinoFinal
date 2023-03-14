@@ -84,11 +84,6 @@ class MongoConexion:
         collection = db[self.collection_name]
         collection.delete_many({})
 
-# if __name__ == "__main__":
-
-# mongo_object = MongoConexion("mongodb+srv://yordiortiz98:Edition210302@cluster0.rcu24ht.mongodb.net/test","Prueba","cluster0")
-
-# print(mongo_object.getStatus())
 
 
 ta = []

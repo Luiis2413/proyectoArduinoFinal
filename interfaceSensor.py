@@ -126,7 +126,7 @@ class InterfaceSensor():
         a = 10
         while a != 0:
             self.cls()
-            print("\n\n" + "-" * 10 + "Menu Materias" + "-" * 10)
+            print("\n\n" + "-" * 10 + "Menum Sensores" + "-" * 10)
             print("1) Nueva Sensor\n2) Modificar Sensor\n3) Eliminar Sensor\n4) Mostrar Sensor\n0)salir")
 
             a = input("Selecciona una opción: ")
