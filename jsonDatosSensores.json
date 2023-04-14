@@ -2,24 +2,24 @@
     {
         "filename": "jsonDatosSensores.json",
         "nombre": "IR1",
-        "datos": 0,
-        "fecha": "2023-03-13 20:54:07.453465",
-        "medida": "puerta cerrada",
+        "datos": 1,
+        "fecha": "2023-04-14 14:35:31.675221",
+        "medida": "puerta abierta",
         "lista": []
     },
     {
         "filename": "jsonDatosSensores.json",
         "nombre": "US1",
-        "datos": 2,
-        "fecha": "2023-03-13 20:54:07.493425",
+        "datos": 0,
+        "fecha": "2023-04-14 14:35:32.372991",
         "medida": "cm",
         "lista": []
     },
     {
         "filename": "jsonDatosSensores.json",
         "nombre": "T1",
-        "datos": 414,
-        "fecha": "2023-03-13 20:54:07.541715",
+        "datos": 504,
+        "fecha": "2023-04-14 14:35:32.391706",
         "medida": "c",
         "lista": []
     },
@@ -27,31 +27,31 @@
         "filename": "jsonDatosSensores.json",
         "nombre": "FR1",
         "datos": 0,
-        "fecha": "2023-03-13 20:54:07.561840",
+        "fecha": "2023-04-14 14:35:32.418918",
         "medida": "sombra",
         "lista": []
     },
     {
         "filename": "jsonDatosSensores.json",
         "nombre": "WS",
-        "datos": 385,
-        "fecha": "2023-03-13 20:54:07.589122",
+        "datos": 462,
+        "fecha": "2023-04-14 14:35:32.436984",
         "medida": "sin medida aun",
         "lista": []
     },
     {
         "filename": "jsonDatosSensores.json",
         "nombre": "H1",
-        "datos": 336,
-        "fecha": "2023-03-13 20:54:07.604888",
+        "datos": 402,
+        "fecha": "2023-04-14 14:35:32.470792",
         "medida": "CO2",
         "lista": []
     },
     {
         "filename": "jsonDatosSensores.json",
         "nombre": "HS1",
-        "datos": 68,
-        "fecha": "2023-03-13 20:54:07.633306",
+        "datos": 61,
+        "fecha": "2023-04-14 14:35:32.512160",
         "medida": "%",
         "lista": []
     }

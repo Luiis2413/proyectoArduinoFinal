@@ -82,7 +82,7 @@ class InterfaceDatosSensor():
         id = 0
 
 
-        ser = serial.Serial(self.puerto, 9600)  # Reemplaza 'COM3' con el nombre del puerto serial del Arduino
+        ser = serial.Serial('COM5', 9600)  # Reemplaza 'COM3' con el nombre del puerto serial del Arduino
         i=0
         for listaSensor in mylistaS:
 
@@ -141,12 +141,12 @@ class InterfaceDatosSensor():
               """  p = self.nuevoSensor()
                 self.lista.add(p)
                 self.lista.toJson(self.lista)"""
-              self.puerto=input("Escribe el puerto")
+              #self.puerto=input("Escribe el puerto")
               while True:
                 time.sleep(5)
 
                 self.mostrarSensor()
-                self.modificarSensor(None)
+                self.modificarSensor()
 
 
 
