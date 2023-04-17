@@ -5,12 +5,14 @@ from jsonDatosSensor import  crearjson
 
 
 class DatosSensor(crearjson):
-    def __init__(self,nombre="", datos =0, fecha="",medida=""):
+    def __init__(self,nombre="", datos =0, fecha="",medida="",invernadero="",detalles=list()):
         super(DatosSensor, self).__init__('json/jsonDatosSensor.json')
         self.nombre = nombre
         self.datos = datos
         self.fecha = fecha
         self.medida = medida
+        self.detalles = detalles
+        self.invernadero = invernadero
 
         self.lista = list()
 
@@ -36,7 +38,7 @@ class DatosSensor(crearjson):
         lista = list()
         data = self.getDataJson()
         for x in data:
-            lista.append(DatosSensor(nombre=x["nombre"],datos=x['datos'],medida=x['medida'],fecha=x['fecha']))
+            lista.append(DatosSensor(nombre=x["nombre"],datos=x['datos'],medida=x['medida'],fecha=x['fecha'],detalles=x['detalles'],invernadero=x['invernadero']))
         self.lista = lista
 
     def getDictory(self):
@@ -44,7 +46,9 @@ class DatosSensor(crearjson):
             "nombre":self.nombre,
             "Datos Sensor": self.datos,
             "medida":self.medida,
-            "fecha":self.fecha
+            "fecha":self.fecha,
+            "detalles": self.detalles,
+            "invernadero": self.invernadero,
 
 
         }

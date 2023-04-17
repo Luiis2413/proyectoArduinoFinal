@@ -3,56 +3,105 @@
         "filename": "jsonDatosSensores.json",
         "nombre": "IR1",
         "datos": 1,
-        "fecha": "2023-04-14 14:35:31.675221",
+        "fecha": "2023-04-17 11:07:57.989953",
         "medida": "puerta abierta",
+        "detalles": [
+            "nombre:ir1",
+            "tipo:ir",
+            "pines:['8']",
+            "descripcionxd"
+        ],
+        "invernadero": "inv1",
         "lista": []
     },
     {
         "filename": "jsonDatosSensores.json",
-        "nombre": "US1",
+        "nombre": "us",
         "datos": 0,
-        "fecha": "2023-04-14 14:35:32.372991",
-        "medida": "cm",
+        "fecha": "2023-04-17 11:08:04.170121",
+        "medida": " cm",
+        "detalles": [
+            "nombre:US1",
+            "tipo:us",
+            "pines:['2', '3']",
+            "descripcionmide la distancia x"
+        ],
+        "invernadero": "inv1",
         "lista": []
     },
     {
         "filename": "jsonDatosSensores.json",
-        "nombre": "T1",
-        "datos": 504,
-        "fecha": "2023-04-14 14:35:32.391706",
-        "medida": "c",
-        "lista": []
-    },
-    {
-        "filename": "jsonDatosSensores.json",
-        "nombre": "FR1",
+        "nombre": "Temperatura:",
         "datos": 0,
-        "fecha": "2023-04-14 14:35:32.418918",
-        "medida": "sombra",
+        "fecha": "2023-04-17 11:08:09.424097",
+        "medida": "\u00b0C",
+        "detalles": [
+            "nombre:T1",
+            "tipo:tem",
+            "pines:['4']",
+            "descripcionmide la temcadena = ser.readline()"
+        ],
+        "invernadero": "inv1",
+        "lista": []
+    },
+    {
+        "filename": "jsonDatosSensores.json",
+        "nombre": "fr",
+        "datos": 1,
+        "fecha": "2023-04-17 11:08:15.383354",
+        "medida": "Luz",
+        "detalles": [
+            "nombre:FR1",
+            "tipo:fr",
+            "pines:['9', '10']",
+            "descripcionindica si es de dia o de noche"
+        ],
+        "invernadero": "inv1",
         "lista": []
     },
     {
         "filename": "jsonDatosSensores.json",
         "nombre": "WS",
-        "datos": 462,
-        "fecha": "2023-04-14 14:35:32.436984",
+        "datos": 551,
+        "fecha": "2023-04-17 11:08:20.223391",
         "medida": "sin medida aun",
+        "detalles": [
+            "nombre:WS1",
+            "tipo:ws",
+            "pines:['7']",
+            "descripcionmidde el nivel del agua"
+        ],
+        "invernadero": "inv1",
         "lista": []
     },
     {
         "filename": "jsonDatosSensores.json",
-        "nombre": "H1",
-        "datos": 402,
-        "fecha": "2023-04-14 14:35:32.470792",
-        "medida": "CO2",
+        "nombre": "G",
+        "datos": 299,
+        "fecha": "2023-04-17 11:08:25.167958",
+        "medida": "gas detectado",
+        "detalles": [
+            "nombre:H1",
+            "tipo:h",
+            "pines:['9', '10']",
+            "descripcionmide el humo"
+        ],
+        "invernadero": "inv1",
         "lista": []
     },
     {
         "filename": "jsonDatosSensores.json",
         "nombre": "HS1",
-        "datos": 61,
-        "fecha": "2023-04-14 14:35:32.512160",
+        "datos": 70,
+        "fecha": "2023-04-17 11:08:29.736645",
         "medida": "%",
+        "detalles": [
+            "nombre:HS1",
+            "tipo:hs",
+            "pines:['A1', 'A2']",
+            "descripcionmide la humedad del suelo"
+        ],
+        "invernadero": "inv1",
         "lista": []
     }
 ]

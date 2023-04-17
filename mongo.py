@@ -34,7 +34,7 @@ class MongoConexion:
                     "pines": data.pines,
                     "tipo": data.tipo,
                     "descr": data.descr,
-                    "lista": []
+
                 }
                                     )
 
@@ -50,7 +50,10 @@ class MongoConexion:
                         "datos": data.datos,
                         "medida": data.medida,
                         "fecha": data.fecha,
-                        "lista": []
+                        "detalles": data.detalles,
+                        "invernadero": data.invernadero
+
+
                     }
                 )
 

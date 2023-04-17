@@ -9,7 +9,7 @@ import serial
 import time
 
 
-interacciondb = mongo.MongoConexion("mongodb://localhost:27017", "sistemaSensores", "DatosSensores")
+interacciondb = mongo.MongoConexion("mongodb+srv://abel0120:01abel01@cluster0.mndru6r.mongodb.net/?retryWrites=true&w=majority", "sistemaSensores", "DatosSensores")
 
 class InterfaceDatosSensor():
     def __init__(self):
@@ -18,6 +18,7 @@ class InterfaceDatosSensor():
         self.lista = DatosSensor()
         self.lista.toObjects()
         self.puerto = ""
+        self.invernadero=""
 
     def cls(self):
         os.system('cls' if os.name == 'nt' else 'clear')
@@ -46,14 +47,14 @@ class InterfaceDatosSensor():
             mylista = self.lista
         else:
             mylista = lista
-        print("ID".ljust(5) +"\t\t" + 'nombre'.ljust(20)+ "\t\t" + 'Datos'.ljust(20)+'Fecha'.ljust(20)+'')
+        print("ID".ljust(5) +"\t\t" + 'nombre'.ljust(5)+ "\t\t" + 'Datos'.ljust(20)+'Fecha'.ljust(20)+'invernadero'.ljust(20)+'Info'.ljust(20)+'')
         i = 0
 
 
 
 
         for listaSensor in mylista:
-            print(str(i).ljust(5) + "\t\t" + listaSensor.nombre+"\t\t" + str(listaSensor.datos) +  listaSensor.medida+ "\t\t"+listaSensor.fecha )
+            print(str(i).ljust(5) + "\t\t" + listaSensor.nombre+"\t\t" + str(listaSensor.datos) +  listaSensor.medida+ "\t\t"+listaSensor.fecha+"\t\t" +listaSensor.invernadero+ "\t\t"+str(listaSensor.detalles))
             i += 1
 
 
@@ -82,12 +83,29 @@ class InterfaceDatosSensor():
         id = 0
 
 
-        ser = serial.Serial('COM5', 9600)  # Reemplaza 'COM3' con el nombre del puerto serial del Arduino
+        ser = serial.Serial('/dev/ttyUSB0', 9600)  # Reemplaza 'COM3' con el nombre del puerto serial del Arduino
         i=0
         for listaSensor in mylistaS:
 
+            mensaje = listaSensor.tipo
+            time.sleep(2)  # Espera 2 segundos para que Arduino se inicialice
+            # Envía el mensaje al Arduino
+            ser.write(mensaje.encode())
+
+
+            dtails=[]
+            dtails.append("nombre:"+listaSensor.nombreSensor)
+            dtails.append("tipo:"+listaSensor.tipo)
+            dtails.append("pines:"+str(listaSensor.pines))
+            dtails.append("descripcion"+listaSensor.descr)
+
+
+
+
             cadena = ser.readline()
             nom = cadena.decode('utf-8').rstrip()
+
+
 
 
 
@@ -104,6 +122,8 @@ class InterfaceDatosSensor():
             listaSensor.nombre = str(nom)
             listaSensor.datos = int(dats)
             listaSensor.medida = medida
+            listaSensor.detalles=dtails
+            listaSensor.invernadero=self.invernadero
 
             listaSensor.fecha = str(now)
             self.lista.modificar(id, listaSensor)
@@ -142,6 +162,10 @@ class InterfaceDatosSensor():
                 self.lista.add(p)
                 self.lista.toJson(self.lista)"""
               #self.puerto=input("Escribe el puerto")
+
+              self.invernadero=input("Escribe el nombre del invernadero")
+
+
               while True:
                 time.sleep(5)
 

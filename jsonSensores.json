@@ -1,9 +1,9 @@
 [
     {
         "filename": "jsonSensores.json",
-        "nombreSensor": "IR",
+        "nombreSensor": "ir1",
         "pines": "['8']",
-        "tipo": "IR",
+        "tipo": "ir",
         "descr": "xd",
         "lista": []
     },
@@ -11,7 +11,7 @@
         "filename": "jsonSensores.json",
         "nombreSensor": "US1",
         "pines": "['2', '3']",
-        "tipo": "US",
+        "tipo": "us",
         "descr": "mide la distancia x",
         "lista": []
     },
@@ -19,7 +19,7 @@
         "filename": "jsonSensores.json",
         "nombreSensor": "T1",
         "pines": "['4']",
-        "tipo": "Tem",
+        "tipo": "tem",
         "descr": "mide la temcadena = ser.readline()",
         "lista": []
     },
@@ -27,7 +27,7 @@
         "filename": "jsonSensores.json",
         "nombreSensor": "FR1",
         "pines": "['9', '10']",
-        "tipo": "FR",
+        "tipo": "fr",
         "descr": "indica si es de dia o de noche",
         "lista": []
     },
@@ -35,7 +35,7 @@
         "filename": "jsonSensores.json",
         "nombreSensor": "WS1",
         "pines": "['7']",
-        "tipo": "WS",
+        "tipo": "ws",
         "descr": "midde el nivel del agua",
         "lista": []
     },
@@ -43,7 +43,7 @@
         "filename": "jsonSensores.json",
         "nombreSensor": "H1",
         "pines": "['9', '10']",
-        "tipo": "H",
+        "tipo": "h",
         "descr": "mide el humo",
         "lista": []
     },
@@ -51,7 +51,7 @@
         "filename": "jsonSensores.json",
         "nombreSensor": "HS1",
         "pines": "['A1', 'A2']",
-        "tipo": "HS",
+        "tipo": "hs",
         "descr": "mide la humedad del suelo",
         "lista": []
     }

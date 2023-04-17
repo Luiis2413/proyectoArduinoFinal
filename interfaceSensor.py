@@ -8,7 +8,7 @@ import os
 import interfaceDatosArduino
 
 
-interacciondb = mongo.MongoConexion("mongodb://localhost:27017", "sistemaSensores", "Sensores")
+interacciondb = mongo.MongoConexion("mongodb+srv://abel0120:01abel01@cluster0.mndru6r.mongodb.net/?retryWrites=true&w=majority", "sistemaSensores", "Sensores")
 
 class InterfaceSensor():
     def __init__(self):
@@ -26,6 +26,8 @@ class InterfaceSensor():
         listaDataSEnsor.nombre = ""
         listaDataSEnsor.medida = ""
         listaDataSEnsor.datos = 0
+        listaDataSEnsor.detalles = []
+        listaDataSEnsor.invernadero = "a"
 
         return listaDataSEnsor
 
