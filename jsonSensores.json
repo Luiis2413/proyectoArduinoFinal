@@ -1,57 +1,64 @@
 [
     {
         "filename": "jsonSensores.json",
-        "nombreSensor": "ir1",
+        "nombreSensor": "infrarojo",
         "pines": "['8']",
         "tipo": "ir",
         "descr": "xd",
+        "invernadero": "inv1",
         "lista": []
     },
     {
         "filename": "jsonSensores.json",
-        "nombreSensor": "US1",
+        "nombreSensor": "Ultrasonico",
         "pines": "['2', '3']",
         "tipo": "us",
+        "invernadero": "inv1",
         "descr": "mide la distancia x",
         "lista": []
     },
     {
         "filename": "jsonSensores.json",
-        "nombreSensor": "T1",
+        "nombreSensor": "Temeratura",
         "pines": "['4']",
         "tipo": "tem",
-        "descr": "mide la temcadena = ser.readline()",
+        "invernadero": "inv1",
+        "descr": "mide la tem",
         "lista": []
     },
     {
         "filename": "jsonSensores.json",
-        "nombreSensor": "FR1",
+        "nombreSensor": "Fotoresistencia",
         "pines": "['9', '10']",
         "tipo": "fr",
+        "invernadero": "inv1",
         "descr": "indica si es de dia o de noche",
         "lista": []
     },
     {
         "filename": "jsonSensores.json",
-        "nombreSensor": "WS1",
+        "nombreSensor": "Nivel de agua",
         "pines": "['7']",
         "tipo": "ws",
+        "invernadero": "inv1",
         "descr": "midde el nivel del agua",
         "lista": []
     },
     {
         "filename": "jsonSensores.json",
-        "nombreSensor": "H1",
+        "nombreSensor": "Humedad",
         "pines": "['9', '10']",
         "tipo": "h",
+        "invernadero": "inv1",
         "descr": "mide el humo",
         "lista": []
     },
     {
         "filename": "jsonSensores.json",
-        "nombreSensor": "HS1",
+        "nombreSensor": "Humedad del Suela",
         "pines": "['A1', 'A2']",
         "tipo": "hs",
+        "invernadero": "inv1",
         "descr": "mide la humedad del suelo",
         "lista": []
     }

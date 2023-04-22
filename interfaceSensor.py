@@ -37,6 +37,7 @@ class InterfaceSensor():
 
 
         listaSensor.nombreSensor = input("Nombre del Sensor:")
+        listaSensor.invernadero = input("Nombre del invernadero:")
         listaSensor.tipo = input("tipo de sensor:")
         cantPin=int(input("ingresa la cantidad de pines"))
         pines=list()
@@ -76,7 +77,7 @@ class InterfaceSensor():
 
 
         for listaSensor in mylista:
-            print(str(i).ljust(5) + "\t\t" + listaSensor.nombreSensor+ "\t\t"+listaSensor.tipo +"\t\t"+listaSensor.pines+"\t\t"+listaSensor.descr)
+            print(str(i).ljust(5) + "\t\t" + listaSensor.nombreSensor+ "\t\t"+listaSensor.tipo +"\t\t"+listaSensor.pines+"\t\t"+listaSensor.invernadero+"\t\t"+listaSensor.descr)
             i += 1
 
             if (interacciondb.conect()):

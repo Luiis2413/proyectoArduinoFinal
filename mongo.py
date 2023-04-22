@@ -33,6 +33,7 @@ class MongoConexion:
                     "nombreSensor": data.nombreSensor,
                     "pines": data.pines,
                     "tipo": data.tipo,
+                    "invernadero":data.invernadero,
                     "descr": data.descr,
 
                 }

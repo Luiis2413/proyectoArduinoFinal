@@ -18,7 +18,7 @@ class InterfaceDatosSensor():
         self.lista = DatosSensor()
         self.lista.toObjects()
         self.puerto = ""
-        self.invernadero=""
+
 
     def cls(self):
         os.system('cls' if os.name == 'nt' else 'clear')
@@ -88,22 +88,28 @@ class InterfaceDatosSensor():
         for listaSensor in mylistaS:
 
             mensaje = listaSensor.tipo
+
+            print(mensaje)
+
+
             time.sleep(2)  # Espera 2 segundos para que Arduino se inicialice
             # Envía el mensaje al Arduino
             ser.write(mensaje.encode())
 
 
             dtails=[]
+            inv=""
+            nomb=""
             dtails.append("nombre:"+listaSensor.nombreSensor)
             dtails.append("tipo:"+listaSensor.tipo)
             dtails.append("pines:"+str(listaSensor.pines))
             dtails.append("descripcion"+listaSensor.descr)
+            inv=listaSensor.invernadero
+            nomb=listaSensor.nombreSensor
 
 
 
 
-            cadena = ser.readline()
-            nom = cadena.decode('utf-8').rstrip()
 
 
 
@@ -119,11 +125,11 @@ class InterfaceDatosSensor():
             now = datetime.now()
 
             listaSensor = self.lista.getlist()[id]
-            listaSensor.nombre = str(nom)
+            listaSensor.nombre = nomb
             listaSensor.datos = int(dats)
             listaSensor.medida = medida
             listaSensor.detalles=dtails
-            listaSensor.invernadero=self.invernadero
+            listaSensor.invernadero=inv
 
             listaSensor.fecha = str(now)
             self.lista.modificar(id, listaSensor)
@@ -163,7 +169,6 @@ class InterfaceDatosSensor():
                 self.lista.toJson(self.lista)"""
               #self.puerto=input("Escribe el puerto")
 
-              self.invernadero=input("Escribe el nombre del invernadero")
 
 
               while True:
